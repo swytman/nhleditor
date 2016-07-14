@@ -1,0 +1,29 @@
+.games-list {
+  padding: 5px;
+  padding-top: 20px;
+  hr{
+    max-width: 100px;
+    margin: 0px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+  &_title{
+    padding: 10px;
+    font-size: 20px;
+    margin-right: 20px;
+  }
+  &_list{
+    padding: 10px
+  }
+}
+
+.game{
+  padding: 10px;
+  padding-top: 20px;
+  &-team{
+    padding: 10px;
+  }
+  &-team_form{
+    padding-top: 10px;
+  }
+}
