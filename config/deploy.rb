@@ -4,7 +4,7 @@ lock '3.5.0'
 
 set :application, 'nhleditor'
 set :pm2_app_command, 'npm start'
-set :repo_url, 'git@github.com:swytman/wild-apricot.git'
+set :repo_url, 'git@github.com:swytman/nhleditor.git'
 set :branch, "master"
 set :deploy_to, '/var/www/nhleditor'
 # set :linked_files, %w{config/app.yml}
