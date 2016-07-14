@@ -1,14 +1,29 @@
 {
-  "name": "react-router-ru-tutorial",
+  "name": "NHL games editor",
   "version": "1.0.0",
-  "description": "React-router RU tutorial",
+  "description": "react+redux+nodejs",
   "main": "index.js",
   "scripts": {
     "start": "nodemon bin/server.js"
   },
-  "author": "Maxim Patsianskiy",
+  "author": "Viacheslav Stepanov",
   "license": "MIT",
   "devDependencies": {
+
+  },
+  "dependencies": {
+    "axios": "^0.12.0",
+    "body-parser": "^1.15.2",
+    "form-serialize": "^0.7.1",
+    "jquery": "^2.2.1",
+    "node-sass": "^3.8.0",
+    "nodemon": "^1.9.2",
+    "react": "^15.0.1",
+    "react-dom": "^15.0.1",
+    "react-redux": "^4.4.4",
+    "react-router": "^2.0.1",
+    "redux": "^3.4.0",
+    "sqlite3": "^3.1.4",
     "autoprefixer": "^6.3.3",
     "babel-core": "^6.7.2",
     "babel-eslint": "^5.0.0",
@@ -42,19 +57,5 @@
     "webpack-dev-server": "^1.14.1",
     "webpack-hot-middleware": "^2.10.0",
     "webpack-merge": "^0.8.3"
-  },
-  "dependencies": {
-    "axios": "^0.12.0",
-    "body-parser": "^1.15.2",
-    "form-serialize": "^0.7.1",
-    "jquery": "^2.2.1",
-    "node-sass": "^3.8.0",
-    "nodemon": "^1.9.2",
-    "react": "^15.0.1",
-    "react-dom": "^15.0.1",
-    "react-redux": "^4.4.4",
-    "react-router": "^2.0.1",
-    "redux": "^3.4.0",
-    "sqlite3": "^3.1.4"
   }
 }
