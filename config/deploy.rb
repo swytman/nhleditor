@@ -7,7 +7,7 @@ set :pm2_app_command, 'npm start'
 set :repo_url, 'git@github.com:swytman/nhleditor.git'
 set :branch, "master"
 set :deploy_to, '/var/www/nhleditor'
-# set :linked_files, %w{config/app.yml}
+set :linked_dirs, %w{node_modules}
 
 namespace :deploy do
   desc 'Restart application'
