@@ -1,5 +1,5 @@
 {
-  "name": "NHL games editor",
+  "name": "nhleditor",
   "version": "1.0.0",
   "description": "react+redux+nodejs",
   "main": "index.js",
