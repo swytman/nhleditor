@@ -1,6 +1,5 @@
 
 # config valid only for current version of Capistrano
-lock '3.5.0'
 
 set :application, 'nhleditor'
 set :pm2_app_command, 'pm2 start npm --name "NhlEditor" -- start'
