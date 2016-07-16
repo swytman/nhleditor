@@ -11,9 +11,10 @@ set :linked_dirs, %w{node_modules data}
 namespace :deploy do
    desc 'Restart application'
    task :restart do
-     # invoke 'npm:install'
-     invoke 'pm2:delete nhleditor'
-     invoke 'pm2:start'
+     on roles(:web) do
+       execute 'pm2 delete nhleditor'
+       execute 'pm2 start npm --name "nhleditor" -- start'
+     end
    end
 
    after :publishing, :restart
