@@ -26,10 +26,11 @@ export default class Game extends Component {
     }
   }
 
+// после получения данных формы заполняем поля
   componentDidUpdate(prevProps){
-    if (!prevProps.payload.game || prevProps.payload.game.id !== this.props.payload.game.id){
-
+    if (this.props.payload.game && (!prevProps.payload.game || prevProps.payload.game.id !== this.props.payload.game.id)){
         this.fillForm(this.props.payload.game);
+        this.testData(this.props.payload.game)
     }
   }
 
@@ -42,7 +43,7 @@ export default class Game extends Component {
 
 // проверка Команда (не пустые, не одинаковые)
   testTeams(data){
-    if (!data.data || !data.data.home_id || !data.data.guest_id || data.data.home_id === data.data.guest_id){
+    if (!data.home_id || !data.guest_id || data.home_id === data.guest_id){
         $('select[name*=home_id], select[name*=guest_id]').addClass('error');
         return true;
     } else {
@@ -87,7 +88,7 @@ export default class Game extends Component {
       var data = serialize(form, { hash: true });
 
 
-      if (!this.testData(data)){
+      if (!this.testData(data.data)){
           if (this.props.params.game_id === 'new'){
               this.props.gameActions.createGame(data)
           } else {
