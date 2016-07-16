@@ -2,9 +2,9 @@ import React from 'react'
 import { Route, IndexRoute } from 'react-router'
 
 import App from './containers/App'
-import TeamPage from './components/TeamPage'
-import Games from './components/Games'
-import Game from './components/Game'
+import TeamPage from './containers/TeamPage'
+import Games from './containers/Games'
+import Game from './containers/Game'
 import NotFound from './components/NotFound'
 
 export const routes = (

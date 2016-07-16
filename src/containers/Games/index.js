@@ -3,7 +3,7 @@ import { bindActionCreators } from 'redux'
 import { Link } from 'react-router'
 import { connect } from 'react-redux'
 import * as gamesActions from '../../actions/GamesActions'
-import GameListItem from '../GameListItem'
+import GameListItem from '../../components/GameListItem'
 import './styles.scss'
 
 export default class Games extends Component {

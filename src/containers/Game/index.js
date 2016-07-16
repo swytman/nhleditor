@@ -3,13 +3,17 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 var serialize = require('form-serialize');
 import * as gameActions from '../../actions/GameActions'
-import GameForm from '../GameForm'
+import GameForm from '../../components/GameForm'
 import $ from 'jquery'
 
 import './styles.scss'
 
 
 export default class Game extends Component {
+
+    constructor(props) {
+        super(props);
+    }
 
   componentDidMount(){
     this.props.gameActions.getGame(this.props.params.game_id);
@@ -23,14 +27,29 @@ export default class Game extends Component {
   }
 
   componentDidUpdate(prevProps){
-
     if (!prevProps.payload.game || prevProps.payload.game.id !== this.props.payload.game.id){
 
         this.fillForm(this.props.payload.game);
     }
   }
 
-  fillForm (data){
+  testData(data){
+    let errors = false;
+    errors = this.testTeams(data);
+    return errors
+  }
+
+  testTeams(data){
+    if (!data.data || !data.data.home_id || !data.data.guest_id || data.data.home_id === data.data.guest_id){
+        $('select[name*=home_id], select[name*=guest_id]').addClass('error');
+        return true;
+    } else {
+        $('select[name*=home_id], select[name*=guest_id]').removeClass('error');
+        return false;
+    }
+  }
+
+  fillForm(data){
 
         $(this.refs.game_form).find('input').each( function(){
             if ($(this).is(':checkbox')) {
@@ -63,12 +82,14 @@ export default class Game extends Component {
       var form = this.refs.game_form;
 
       var data = serialize(form, { hash: true });
-      console.log(data);
 
-      if (this.props.params.game_id === 'new'){
-        this.props.gameActions.createGame(data)
-      } else {
-        this.props.gameActions.updateGame({...data, id: this.props.params.game_id})
+
+      if (!this.testData(data)){
+          if (this.props.params.game_id === 'new'){
+              this.props.gameActions.createGame(data)
+          } else {
+              this.props.gameActions.updateGame({...data, id: this.props.params.game_id})
+          }
       }
 
 
