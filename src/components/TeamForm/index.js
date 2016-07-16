@@ -8,7 +8,7 @@ export default class TeamForm extends Component {
       this.state = {team_title: '' }
 
       var self = this;
-
+      
       window.ee.addListener('TeamPage.SELECT_TEAM', (id) =>  {
         var value = self.props.teamlist.teams.filter((team) => team.id === id);
         if (value.length == 1) {value = value[0].title } else {value = ''}

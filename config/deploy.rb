@@ -12,7 +12,7 @@ namespace :deploy do
    desc 'Restart application'
    task :restart do
      # invoke 'npm:install'
-     invoke 'pm2:delete'
+     invoke 'pm2:delete nhleditor'
      invoke 'pm2:start'
    end
 

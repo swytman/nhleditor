@@ -29,9 +29,11 @@ app.use(bodyParser.urlencoded({
   app.use(express.static(__dirname + '/'));
 })();
 
+// team routes load
 require('./src/server/routes/team_routes')(app, db);
 
 var gamesRouter = express.Router({mergeParams: true});
+// games routes load
 require('./src/server/routes/game_routes')(gamesRouter, db);
 app.use('/api/games', gamesRouter)
 

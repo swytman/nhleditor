@@ -10,7 +10,7 @@ import NotFound from './components/NotFound'
 export const routes = (
   <div>
     <Route path='/' component={App}>
-      <IndexRoute component={TeamPage} />
+      <IndexRoute component={Games} />
       <Route path='teams' component={TeamPage} />
       <Route path='games' component={Games}>
         <Route path=':game_id' component={Game}/>

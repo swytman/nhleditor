@@ -33,12 +33,14 @@ export default class Game extends Component {
     }
   }
 
+//    Проверка формы на ошибки
   testData(data){
     let errors = false;
     errors = this.testTeams(data);
     return errors
   }
 
+// проверка Команда (не пустые, не одинаковые)
   testTeams(data){
     if (!data.data || !data.data.home_id || !data.data.guest_id || data.data.home_id === data.data.guest_id){
         $('select[name*=home_id], select[name*=guest_id]').addClass('error');
@@ -49,6 +51,7 @@ export default class Game extends Component {
     }
   }
 
+// заполнение формы из объекта
   fillForm(data){
 
         $(this.refs.game_form).find('input').each( function(){
