@@ -10,6 +10,7 @@ require('babel-polyfill').default;
 
 const TARGET = process.env.npm_lifecycle_event;
 
+
 const PATHS = {
   app: path.join(__dirname, '../src'),
   build: path.join(__dirname, '../dist'),
@@ -88,10 +89,9 @@ const common = {
   },
 };
 
-if (TARGET === 'start' || !TARGET) {
-  module.exports = merge(development, common);
-}
 
-if (TARGET === 'build' || !TARGET) {
+if (process.env.NODE_ENV === 'production') {
   module.exports = merge(production, common);
+} else {
+  module.exports = merge(development, common);
 }
