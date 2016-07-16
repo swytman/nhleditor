@@ -13,7 +13,7 @@ namespace :deploy do
    task :restart do
      on roles(:web) do
        execute 'pm2 delete nhleditor'
-       execute 'pm2 start npm --name "nhleditor" -- start'
+       execute "cd '#{fetch(:deploy_to)}/current' && pm2 start npm --name 'nhleditor' -- start"
      end
    end
 
