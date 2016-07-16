@@ -1,4 +1,5 @@
 .games-list {
+  width: 200px;
   padding: 5px;
   padding-top: 20px;
   hr{
@@ -18,6 +19,7 @@
 }
 
 .game{
+  width: 600px;
   padding: 10px;
   padding-top: 20px;
   &-team{

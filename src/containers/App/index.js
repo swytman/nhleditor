@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import NavLink from '../../components/NavLink'
+import './styles.scss'
 
 var EventEmitter = require('events').EventEmitter;
 
