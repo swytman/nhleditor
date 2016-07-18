@@ -94,7 +94,7 @@ export function createGame(game) {
                 type: ROUTING,
                 payload: {
                     method: 'push',
-                    nextUrl: '/games/'+ result.data.id
+                    nextUrl: '/test-wa/games/'+ result.data.id
                 }
             });
             window.ee.emit('GAMESLIST.UPDATE_REQUIRED');
