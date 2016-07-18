@@ -59,7 +59,7 @@ export function destroyGame(id) {
                     type: ROUTING,
                     payload: {
                         method: 'push',
-                        nextUrl: '/games'
+                        nextUrl: '/test-wa/games'
                     }
                 });
                 window.ee.emit('GAMESLIST.UPDATE_REQUIRED');

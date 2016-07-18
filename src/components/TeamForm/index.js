@@ -44,7 +44,7 @@ export default class TeamForm extends Component {
     handleDestroyClick = (e) => {
         e.preventDefault();
         if (!this.props.teamlist.selected) {return}
-        if (confirm('Удалить игру?')){
+        if (confirm('Удалить команду?')){
             var input = this.refs.team_title;
             var team = {id: input.getAttribute('data-id')};
             this.props.destroyTeam(team);
