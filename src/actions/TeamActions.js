@@ -28,7 +28,7 @@ export function updateTeam(team) {
         });
 
         request.patch(
-            '/api/teams/'+team.id,
+            '/test-wa/api/teams/'+team.id,
             team,
             {headers: {'Accept': 'application/json'}}
         )
@@ -55,7 +55,7 @@ export function createTeam(team) {
         });
 
         request.post(
-            '/api/teams',
+            '/test-wa/api/teams',
             team,
             {headers: {'Accept': 'application/json'}}
         )
@@ -82,7 +82,7 @@ export function destroyTeam(team) {
         });
 
         request.delete(
-            '/api/teams/' + team.id,
+            '/test-wa/api/teams/' + team.id,
             team,
             {headers: {'Accept': 'application/json'}}
         )
@@ -110,7 +110,7 @@ export function loadTeams() {
         });
 
         request.get(
-            '/api/teams',
+            '/test-wa/api/teams',
             {headers: {'Accept': 'application/json'}}
         )
             .then(result => {

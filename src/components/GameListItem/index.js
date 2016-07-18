@@ -7,7 +7,7 @@ export default class GameListItem extends Component {
         var game = this.props.game;
         return (
             <div>
-                <NavLink to={`/games/${game.id}`}>
+                <NavLink to={`/test-wa/games/${game.id}`}>
                     {game.home} - {game.guest}
                 </NavLink>
             </div>

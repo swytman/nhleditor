@@ -25,7 +25,7 @@ export default class Games extends Component {
             <span className='games-list_title'>Список игр</span>
 
             <div className='games-list_list'>
-                <Link to='/games/new'>
+                <Link to='/test-wa/games/new'>
                     Новая игра
                 </Link>
                 <hr />

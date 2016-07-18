@@ -14,7 +14,7 @@ export function loadGames() {
         });
 
         request.get(
-            '/api/games',
+            '/test-wa/api/games',
             {headers: {'Accept': 'application/json'}}
         )
             .then(result => {
@@ -40,7 +40,7 @@ export function getGame(id) {
       });
 
       request.id(
-          '/api/game/' + id,
+          '/test-wa/api/game/' + id,
           {headers: {'Accept': 'application/json'}}
       )
           .then(result => {

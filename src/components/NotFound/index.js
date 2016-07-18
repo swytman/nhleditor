@@ -7,7 +7,7 @@ export default class NotFound extends Component {
       <div className='container'>
         <div className='row'>
           <div className='col-md-12'>
-            Страница не найдена. Вернуться на <Link to='/'>главную</Link>?
+            Страница не найдена. Вернуться на <Link to='/test-wa/'>главную</Link>?
           </div>
         </div>
       </div>

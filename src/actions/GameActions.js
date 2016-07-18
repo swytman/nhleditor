@@ -21,7 +21,7 @@ export function getGame(id) {
         });
 
         request.get(
-            '/api/games/' + id,
+            '/test-wa/api/games/' + id,
             {headers: {'Accept': 'application/json'}}
         )
             .then(result => {
@@ -47,7 +47,7 @@ export function destroyGame(id) {
         });
 
         request.delete(
-            '/api/games/' + id,
+            '/test-wa/api/games/' + id,
             {headers: {'Accept': 'application/json'}}
         )
             .then(result => {
@@ -81,7 +81,7 @@ export function createGame(game) {
         });
 
         request.post(
-            '/api/games',
+            '/test-wa/api/games',
             game,
             {headers: {'Accept': 'application/json'}}
         )
@@ -116,7 +116,7 @@ export function updateGame(game) {
         });
 
         request.patch(
-            '/api/games/' + game.id,
+            '/test-wa/api/games/' + game.id,
             game,
             {headers: {'Accept': 'application/json'}}
         )

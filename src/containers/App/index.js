@@ -11,8 +11,8 @@ export default class App extends Component {
     return (
       <div className='container'>
         <ul className='nav nav-pills'>
-          <li><NavLink to='/games'>Игры</NavLink></li>
-          <li><NavLink to='/teams'>Команды</NavLink></li>
+          <li><NavLink to='/test-wa/games'>Игры</NavLink></li>
+          <li><NavLink to='/test-wa/teams'>Команды</NavLink></li>
         </ul>
         {this.props.children}
       </div>
