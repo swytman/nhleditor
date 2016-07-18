@@ -35,7 +35,7 @@ require('./src/server/routes/team_routes')(app, db);
 var gamesRouter = express.Router({mergeParams: true});
 // games routes load
 require('./src/server/routes/game_routes')(gamesRouter, db);
-app.use('/api/games', gamesRouter)
+app.use('/test-wa/api/games', gamesRouter)
 
 app.get(/.*/, function root(req, res) {
   res.sendFile(__dirname + '/index.html');
